@@ -1,0 +1,129 @@
+.home-css {
+    font-family: "Lato", sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: #f8f9fa !important;
+}
+.navbar-nav .nav-link {
+    color: #ddd !important;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important;
+}
+
+header {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 123, 255, 0.8),
+        rgba(0, 123, 255, 0.5)
+    );
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    border-bottom: 5px solid #007bff;
+}
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+header p {
+    font-size: 1.5rem;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+.card-title {
+    font-weight: 600;
+    color: #007bff;
+}
+.card-text {
+    color: #495057;
+}
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+}
+.card-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+.dropdown-menu a {
+    color: #007bff;
+}
+.dropdown-menu a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+footer {
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 5px solid #007bff;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+#search-container {
+    margin-bottom: 2rem;
+}
+
+.search-results {
+    display: none; /* Static approach, to be handled with JS */
+}
+
+.card-img-top {
+    border-bottom: 4px solid #007bff;
+}
+
+.read-more {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.read-more button {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid #007BFF;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more button:hover {
+    background-color: #007BFF;
+    color: white;
+}

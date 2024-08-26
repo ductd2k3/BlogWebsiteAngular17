@@ -1,0 +1,94 @@
+<div class="home-css">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Welcome to My Blog</h1>
+      <p class="lead">Discover the latest articles and news</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        <h2 class="mb-4 text-secondary">Search and Filter</h2>
+        <form>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="search-input"
+              placeholder="Search by title"
+            />
+          </div>
+          <select class="form-select mb-3" aria-label="Default select example">
+            <option selected value="0">All category</option>
+            @for (c of category; track c.categoryId) {
+              <option value="{{c.categoryId}}">{{c.categoryName}}</option>
+            }
+            
+          </select>
+          <button type="submit" class="btn btn-outline-primary w-100">
+            Search
+          </button>
+        </form>
+
+        <h2 class="mt-4 mb-4 text-secondary">About Me</h2>
+        <div class="card shadow-sm">
+          <img
+            src="https://via.placeholder.com/200x200"
+            class="card-img-top mx-auto mt-3"
+            alt="About Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              I'm a passionate blogger who loves to write about technology,
+              lifestyle, and more. Follow me for more updates!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Posts -->
+      <div class="col-md-8">
+        <h2 class="mb-4 text-secondary">Latest Posts</h2>
+
+        <!-- More Blog Posts -->
+        @for(item of data; track item.blogId){
+        <div class="card mb-4">
+          <img
+            src="{{ item.blogImage }}"
+            class="card-img-top"
+            alt="Post Image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text"></p>
+            <a
+              class="btn btn-outline-primary"
+              [routerLink]="['/blog-detail', item.blogId]"
+              target="_blank"
+              >Read More</a
+            >
+          </div>
+          <div class="card-footer text-muted">
+            Posted on August 20, 2024 by
+            <a href="#" class="text-decoration-none">Admin</a>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="read-more">
+    <button (click)="loadPage()">Xem thêm</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="m-0">© 2024 My Blog. All rights reserved.</p>
+    </div>
+  </footer>
+</div>

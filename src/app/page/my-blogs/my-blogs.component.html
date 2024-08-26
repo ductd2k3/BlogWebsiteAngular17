@@ -1,0 +1,114 @@
+<div class="home-css">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>Welcome to My Blog</h1>
+      <p class="lead">Discover the latest articles and news</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        <a type="submit" class="btn btn-outline-primary w-100 mb-3" href="/user/create-blog">
+          Create post
+        </a>
+        <h2 class="mb-4 text-secondary">Search and Filter</h2>
+        <form>
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="search-input"
+              placeholder="Search by title"
+            />
+          </div>
+          <div class="dropdown mb-3">
+            <button
+              class="btn btn-primary dropdown-toggle w-100"
+              type="button"
+              id="categoriesDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Select Category
+            </button>
+            <ul
+              class="dropdown-menu w-100"
+              aria-labelledby="categoriesDropdown"
+            >
+              <li>
+                <a class="dropdown-item" href="#">All Categories</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Technology</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Lifestyle</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Business</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Entertainment</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Travel</a>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" class="btn btn-outline-primary w-100">
+            Search
+          </button>
+        </form>
+
+        <h2 class="mt-4 mb-4 text-secondary">About Me</h2>
+        <div class="card shadow-sm">
+          <img
+            src="https://via.placeholder.com/200x200"
+            class="card-img-top mx-auto mt-3"
+            alt="About Image"
+          />
+          <div class="card-body">
+            <p class="card-text">
+              I'm a passionate blogger who loves to write about technology,
+              lifestyle, and more. Follow me for more updates!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Posts -->
+      <div class="col-md-8">
+        <h2 class="mb-4 text-secondary">Latest Posts</h2>
+
+        <!-- More Blog Posts -->
+
+        <div class="card mb-4">
+          <img src="img" class="card-img-top" alt="Post Image" />
+          <div class="card-body">
+            <h5 class="card-title">tittle</h5>
+            <p class="card-text"></p>
+            <a class="btn btn-outline-primary" target="_blank">Read More</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on August 20, 2024 by
+            <a href="#" class="text-decoration-none">Admin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="read-more">
+    <button>Xem thêm</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="m-0">© 2024 My Blog. All rights reserved.</p>
+    </div>
+  </footer>
+</div>

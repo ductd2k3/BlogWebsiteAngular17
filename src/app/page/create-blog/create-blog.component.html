@@ -1,0 +1,64 @@
+<div class="create-blog-css">
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Create New Post</h1>
+            <p class="lead">Share your thoughts with the world</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form [formGroup]="applyForm" (submit)="submit()">
+                    <div class="mb-3">
+                        <label for="postTitle" class="form-label">Post Title</label>
+                        <input type="text" class="form-control" id="postTitle" placeholder="Enter your post title" aria-label="Post Title" required formControlName="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="postCategory" class="form-label">Category</label>
+                        <select class="form-select" id="postCategory" aria-label="Post Category" required formControlName="category">
+                            <option value="1">Technology</option>
+                            <option value="2">Lifestyle</option>
+                            <option value="3">Business</option>
+                            <option value="4">Entertainment</option>
+                            <option value="5">Travel</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postContent" class="form-label">Post Content</label>
+                        
+                        <div>
+                            <div class="main-container">
+                                <div class="editor-container editor-container_classic-editor editor-container_include-style" #editorContainerElement>
+                                    <div class="editor-container__editor">
+                                        <div #editorElement>
+                                            <ckeditor [editor]="Editor" [config]="config" *ngIf="isLayoutReady" formControlName="content"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="mb-3">
+                        <label for="postImage" class="form-label">Post Image</label>
+                        <input class="form-control" type="file" accept="image/*" (change)="onFileSelected($event)" id="postImage" aria-label="Post Image">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Publish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="m-0">© 2024 My Blog. All rights reserved.</p>
+            <small>
+                <a href="#" class="text-white">Privacy Policy</a> |
+                <a href="#" class="text-white">Contact Us</a>
+            </small>
+        </div>
+    </footer>
+</div>
